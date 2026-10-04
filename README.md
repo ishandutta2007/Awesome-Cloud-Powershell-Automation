@@ -61,9 +61,9 @@ This repository tracks notable **cloud provider modules**, enterprise SaaS tools
 
 ## 🔓 Open-Source GitHub Projects
 
-> Community-maintained open-source PowerShell projects, infrastructure modules, and cloud utilities. Sorted by GitHub stars (descending). ⭐
+> Community-maintained open-source PowerShell projects, infrastructure modules, and cloud utilities. Sorted by GitHub_Stars (descending). ⭐
 
-| Repo | Description | Stars |
+| Repo | Description | GitHub_Stars |
 |---|---|---|
 | **[Azure PowerShell (Az)](https://github.com/Azure/azure-powershell)** ☁️ | Microsoft's official Azure PowerShell module. Cross-platform cmdlets for Azure resource management and Cloud Shell integration. Apache-2.0. | [![Stars](https://img.shields.io/github/stars/Azure/azure-powershell?style=social&color=white)](https://github.com/Azure/azure-powershell/stargazers) |
 | **[DSC Community Resources](https://github.com/dsccommunity)** 🛠️ | Suite of community-maintained Desired State Configuration (DSC) resources for enterprise Windows & Cloud infrastructure (`HyperVDsc`, `SecurityPolicyDsc`, `WebAdministrationDsc`). MIT. | [![Stars](https://img.shields.io/github/stars/dsccommunity/DscResource.Tests?style=social&color=white)](https://github.com/dsccommunity/DscResource.Tests/stargazers) |
@@ -82,7 +82,7 @@ Contributions are welcome! Help us expand this collection of cloud PowerShell au
 
 1. 🍴 **Fork** the repository.
 2. 📝 **Add/edit** entries in `README.md` following the exact table structure.
-3. 🔍 Ensure pricing details, free tier quotas, and star badges are accurate.
+3. 🔍 Ensure pricing details, free tier quotas, and Stars_Badges are accurate.
 4. 📥 Submit a **Pull Request** with a clear title and context.
 
 ---
