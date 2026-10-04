@@ -1,159 +1,117 @@
-# Awesome-Cloud-Powershell-Automation
-
-# Awesome-Cloud-Powershell-Automation
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Cloud Infrastructure Management, Automation & Multi-Platform Cmdlets*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **cloud provider modules** and **open-source PowerShell projects** for **Cloud PowerShell Automation**. These tools help developers and administrators manage cloud resources, virtual infrastructure, and enterprise systems directly from the PowerShell scripting environment.
-
-
-
-**Examples** include Azure PowerShell Module, AWS Tools for PowerShell, Google Cloud Tools for PowerShell, VMware PowerCLI, Pure Storage PowerShell SDK, NetApp PowerShell Toolkit, Rubrik PowerShell Module, Veeam PowerShell, Cisco UCS PowerTool, and Nutanix Cmdlets (the category leaders).
-
-
-
-**Open-source emphasis**: Cloud PowerShell automation has a **mature but provider-fragmented ecosystem**. **Azure PowerShell (Az)** and **AWS Tools for PowerShell** are both fully open-source and actively maintained, while **Google Cloud Tools for PowerShell** reached **deprecation in January 2026** and is no longer installable via the Google Cloud CLI . The most vibrant open-source activity is in **community-maintained modules** for **Proxmox VE** (Corsinvest and EldoBam modules) and **DSC resources** for Windows infrastructure . This section documents these solutions.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## 📖 Table of Contents
-
-
-
-- [☁️ Provider Modules](#-provider-modules)
-
-- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
-
-- [🤝 How to Contribute](#-how-to-contribute)
-
-- [⚠️ Disclaimer](#-disclaimer)
-
-
-
-## ☁️ Provider Modules
-
-
-
-> **📊 Market Context**: Cloud PowerShell automation is **not a standalone commercial market** — cmdlet modules are **free value-adds** provided by cloud and infrastructure vendors to drive platform adoption. The broader cloud infrastructure management market is estimated at **~$18B in 2026**, with PowerShell remaining the dominant automation language for **Windows-centric enterprises and hybrid cloud environments**. The sector is **highly provider-concentrated** — Microsoft (Az), AWS (AWS.Tools), and VMware (PowerCLI) each ship their own first-party module as the primary programmatic interface. **Google Cloud Tools for PowerShell was deprecated in January 2026**, signaling Google's reduced investment in PowerShell tooling .
-
-
-
-| Platform | Description | Pricing (Starting Tier) | Free Tier Limits | Company Size |
-
-|----------|-------------|------------------------|------------------|--------------|
-
-| **[Azure PowerShell (Az)](https://github.com/Azure/azure-powershell)** | **The most comprehensive cloud PowerShell module.** Contains cmdlets for developing, deploying, administering, and managing Microsoft Azure resources. Preinstalled in Azure Cloud Shell. The `Az` module replaces the legacy `AzureRM` module . | **Free** — module costs nothing. You pay for Azure resources consumed. | **Azure free account**: **$200 credit for 30 days** + **55+ always-free services** + 12 months of popular free services. **Az module**: Free to install from PowerShell Gallery . | **~$281B revenue (Microsoft FY2025)** |
-
-| **[AWS Tools for PowerShell](https://github.com/aws/aws-tools-for-powershell)** | Manage AWS services from PowerShell. The **AWS.Tools** modular variant installs per-service modules (e.g., AWS.Tools.EC2, AWS.Tools.S3). Requires PowerShell 6+ or 5.1 with .NET Framework 4.7.2+ . | **Free** — modules cost nothing. You pay for AWS resources consumed. | **AWS Free Tier**: **$100 sign-up credits** + up to **$100 additional** through activities. **AWS.Tools.Installer** module simplifies installation and updates . | **~$638B revenue (Amazon FY2025)** |
-
-| **[Google Cloud Tools for PowerShell](https://github.com/GoogleCloudPlatform/google-cloud-powershell)** | **Deprecated — do not use for new projects.** Contained PowerShell cmdlets for interacting with Google Cloud Platform. **Effective January 14, 2026, no longer installable via Google Cloud CLI** . | **N/A** — module deprecated. | **N/A** — migration to `gcloud` CLI recommended. | **~$350B revenue (Alphabet FY2025)** |
-
-| **[VMware PowerCLI](https://developer.vmware.com/powercli)** | **The de facto standard for VMware automation.** PowerShell module for managing vSphere, vSAN, NSX-T, and VMware Cloud. Industry-standard for virtualization administrators. | **Free** — PowerCLI costs nothing. You pay for VMware/Broadcom licenses. | **PowerCLI**: Free to download and install. **VMware evaluation licenses**: 60-day trial for most products. | **Part of Broadcom (~$51B revenue)** |
-
-| **[Pure Storage PowerShell SDK](https://github.com/PureStorage-OpenConnect/powershell-sdk)** | Manage Pure Storage FlashArray and FlashBlade from PowerShell. | **Free** — SDK costs nothing. You pay for Pure Storage hardware. | **Free SDK** from PowerShell Gallery. Hardware evaluation available on request. | **Private (~$2B+ revenue est.)** |
-
-| **[NetApp PowerShell Toolkit](https://github.com/NetApp/netapp-powershell-toolkit)** | Manage NetApp ONTAP storage systems from PowerShell. | **Free** — toolkit costs nothing. You pay for NetApp hardware/licenses. | **Free toolkit** from NetApp support site. | **~$6B revenue (NetApp FY2025)** |
-
-| **[Rubrik PowerShell Module](https://github.com/rubrikinc/rubrik-sdk-for-powershell)** | Automate Rubrik backup, recovery, and data security operations. | **Free** — module costs nothing. You pay for Rubrik platform. | **Free module**. **Rubrik trial**: Available on request for enterprise evaluation. | **$1.32B audited fiscal total (FY2026)** |
-
-| **[Veeam PowerShell](https://github.com/VeeamHub/powershell)** | Automate Veeam Backup & Replication, Veeam ONE, and Veeam Cloud Connect. | **Free** — module costs nothing. You pay for Veeam licenses. | **Free module**. **Veeam Community Edition**: Free for up to 10 VMs. | **~$2.0B backup revenue** |
-
-| **[Cisco UCS PowerTool](https://github.com/CiscoUcs/PowerTool)** | Manage Cisco UCS and Cisco Intersight infrastructure from PowerShell. | **Free** — tool costs nothing. You pay for Cisco hardware. | **Free PowerTool**. **UCS evaluation**: Available through Cisco partners. | **~$63B revenue (Cisco FY2025)** |
-
-| **[Nutanix Cmdlets](https://github.com/nutanix/powershell)** | Manage Nutanix AHV, Prism Central, and Calm from PowerShell. | **Free** — cmdlets cost nothing. You pay for Nutanix licenses. | **Free cmdlets**. **Nutanix Community Edition**: Free for non-production use. | **Private (~$1.5B+ revenue est.)** |
-
-
-
-## 🔓 Open-Source GitHub Projects
-
-
-
-Sorted by star count (descending). Star badge links to each repo's stargazers page.
-
-
-
-| Repo | Description | Stars |
-
-|---|---|---|
-
-| **[Azure PowerShell (Az)](https://github.com/Azure/azure-powershell)** — **Microsoft's official Azure PowerShell module.** Contains cmdlets for developing, deploying, administering, and managing Azure resources. The `Az` module replaces `AzureRM`. Preinstalled in Azure Cloud Shell. Compatible with PowerShell 7+ and Windows PowerShell 5.1 (with .NET Framework 4.7.2+) . Apache-2.0. | [![Stars](https://img.shields.io/github/stars/Azure/azure-powershell?style=social&color=white)](https://github.com/Azure/azure-powershell/stargazers) | ~4,500 |
-
-| **[AWS Tools for PowerShell](https://github.com/aws/aws-tools-for-powershell)** — **AWS's official PowerShell module.** The `AWS.Tools` modular variant installs per-service modules (AWS.Tools.EC2, AWS.Tools.S3, etc.). The `AWS.Tools.Installer` module simplifies installation, updating, and removal. Requires PowerShell 6+ or 5.1 with .NET Framework 4.7.2+ . Apache-2.0. | [![Stars](https://img.shields.io/github/stars/aws/aws-tools-for-powershell?style=social&color=white)](https://github.com/aws/aws-tools-for-powershell/stargazers) | ~238 |
-
-| **[Corsinvest Proxmox VE API](https://github.com/Corsinvest/cv4pve-api-powershell)** — **Proxmox VE PowerShell module for accessing the API like VMware PowerCLI.** Direct API access via `Invoke-PveRestApi`, indexed parameter support, task management, SPICE integration, VM operations by ID or name, monitoring, snapshots. Requires PowerShell 6.0+. Install from PowerShell Gallery: `Install-Module -Name Corsinvest.ProxmoxVE.Api` . | [![Stars](https://img.shields.io/github/stars/Corsinvest/cv4pve-api-powershell?style=social&color=white)](https://github.com/Corsinvest/cv4pve-api-powershell/stargazers) | ~250 |
-
-| **[EldoBam Proxmox PVE Module](https://github.com/EldoBam/pve-powershell-module)** — **Proxmox VE PowerShell module.** API endpoint documentation included, `Initialize-PVE` for connection, token or credential authentication, `SkipCertificateCheck` option, Pester tests included (though noted as "currently useless") . | [![Stars](https://img.shields.io/github/stars/EldoBam/pve-powershell-module?style=social&color=white)](https://github.com/EldoBam/pve-powershell-module/stargazers) | ~50 |
-
-| **[DSC Community](https://github.com/dsccommunity)** — **Community-maintained DSC resources for Windows infrastructure.** 92 repositories covering Hyper-V (`HyperVDsc`, 118 stars), DNS Server (`DnsServerDsc`, 65 stars), Security Policy (`SecurityPolicyDsc`, 179 stars), Exchange (`ExchangeDsc`, 81 stars), Web Administration (`WebAdministrationDsc`, 164 stars), and more . MIT. | [![DSC Community](https://img.shields.io/badge/DSC%20Community-92%20repos-blue)](https://github.com/dsccommunity) | ~1,500+ (across repos) |
-
-
-
-**Additional open-source options worth exploring:**
-
-
-
-| Repo | Description |
-
-|---|---|
-
-| **[AzOps](https://github.com/Azure/AzOps)** — PowerShell module that deploys (Push) ARM Resource Templates & Bicep files at all Azure scope levels and exports (Pull) ARM resource hierarchy. **382 stars** . | [![Stars](https://img.shields.io/github/stars/Azure/AzOps?style=social&color=white)](https://github.com/Azure/AzOps/stargazers) |
-
-| **[AWS.Tools Install Script (HP-85/atp)](https://github.com/HP-85/atp)** — Multi-platform install script that downloads AWS.Tools.zip and extracts modules to user's PSModules folder. Parallel extraction on PowerShell 7+ completes full install in **~7 seconds** for 114 MB / 3,795 files . | [![Stars](https://img.shields.io/github/stars/HP-85/atp?style=social&color=white)](https://github.com/HP-85/atp/stargazers) |
-
-| **[Azure Stack Hub Tools](https://github.com/Azure/AzureStack-Tools)** — PowerShell modules for managing and deploying resources to Azure Stack Hub. Includes CapacityManagement, Cloud capabilities, Resource Manager policy, registration, VPN connectivity, and Template validator . | [![Azure](https://img.shields.io/badge/Azure-Stack%20Hub-blue)](https://github.com/Azure/AzureStack-Tools) |
-
-
-
-## 🤝 How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's a provider module or open-source project.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## ⚠️ Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Cloud PowerShell modules handle sensitive credentials and API keys; ensure proper secret management, least-privilege access, and compliance with organizational security policies.
-
-- **Critical lifecycle notice**: **Google Cloud Tools for PowerShell was deprecated in January 2026**. Effective January 14, 2026, the module can no longer be installed using the Google Cloud CLI . Users should migrate to the `gcloud` CLI or other automation approaches.
-
-- **Open-source reality**: Cloud PowerShell automation is **overwhelmingly open-source** — Azure PowerShell (Az), AWS Tools for PowerShell, and all provider modules listed here are **free, open-source tools** published by their respective vendors. The "Provider Modules" section documents first-party modules, while the "Open-Source GitHub Projects" section highlights community-maintained alternatives (Proxmox VE modules, DSC Community resources). **Every major cloud PowerShell module is free to download, use, and modify** — you pay only for the cloud resources you consume. The open-source path is **universally viable** for cloud PowerShell automation.
-
-- **Pricing caveat**: All free tier figures above are **verified against cited search results** but may change without notice. Cloud provider free tiers often have eligibility restrictions (new accounts only), time limits, and service-specific quotas. Always check the provider's official page for current terms.
-
-
+# Awesome Cloud PowerShell Automation ⚡
+
+![Awesome Cloud PowerShell Automation Banner](./assets/banner.svg)
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Powershell-Automation"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Powershell-Automation?style=flat-square" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Powershell-Automation/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-Powershell-Automation?style=flat-square" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Powershell-Automation/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Cloud-Powershell-Automation?style=flat-square" alt="Issues"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Powershell-Automation/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Cloud-Powershell-Automation?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+**Curated List of Cloud Infrastructure SaaS Products, Multi-Platform Cmdlets & Open-Source PowerShell Automation Projects** 🚀  
 
+*Focused on Cloud Infrastructure Management, Hybrid Cloud Automation & Enterprise PowerShell Utilities.*
 
-**Made for cloud administrators, DevOps engineers, platform teams, and Windows infrastructure specialists.**
+**Last updated: October 2026** 📅
 
-Let's make cloud PowerShell automation more open, transparent, and accessible.
+---
+
+This repository tracks notable **cloud provider modules**, enterprise SaaS tools, and **open-source PowerShell projects** for **Cloud PowerShell Automation**. These tools enable DevOps engineers, system administrators, and cloud architects to programmatically manage cloud infrastructure, virtual machines, storage systems, and enterprise back-ups directly from the PowerShell scripting environment.
+
+**Key highlights & top tools** include Azure PowerShell (Az), AWS Tools for PowerShell, VMware PowerCLI, Pure Storage SDK, NetApp Toolkit, Rubrik SDK, Veeam PowerShell, Cisco UCS PowerTool, Nutanix Cmdlets, and community Proxmox VE modules.
+
+---
+
+## 📖 Table of Contents
+
+- [📊 SaaS Products & Cloud Provider Modules](#-saas-products--cloud-provider-modules)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#-disclaimer)
+
+---
+
+## 📊 SaaS Products & Cloud Provider Modules
+
+> **📊 Market Context & Structure**: The cloud infrastructure management market is estimated at **~$18 Billion in 2026**. The sector is **highly concentrated** around major infrastructure vendors (Microsoft, Amazon, Broadcom/VMware, Cisco, NetApp) who provide free PowerShell cmdlet modules as value-added interfaces to drive core platform consumption. The market exhibits a "winner-takes-most" structure for hyperscaler management, while enterprise storage and backup automation remain moderately fragmented across specialized infrastructure leaders. Note that **Google Cloud Tools for PowerShell was officially deprecated in January 2026**.
+
+*Note: All SaaS modules and SDKs below are free value-add tools; pricing reflects the entry-level commercial platform/subscription tier, and company size is listed by market capitalization or annual revenue, sorted in descending order.* 💰
+
+| Platform / Product | Description | Pricing (Starting Tier) | Free Tier Limits | Enterprise Size (Rev / Cap) |
+|---|---|---|---|---|
+| **[AWS Tools for PowerShell](https://github.com/aws/aws-tools-for-powershell)** ⚡ | Official modular PowerShell cmdlets (`AWS.Tools`) for managing Amazon Web Services infrastructure. | **$0.0001/sec** (EC2 t4g.nano starts ~$0.0042/hr; Module is 100% Free) | **AWS Free Tier**: $100 sign-up credits + 750 hrs/mo EC2 t2.micro / t3.micro for 12 months + 5GB S3 storage forever. | **~$3.10 Trillion Market Cap** (Amazon) |
+| **[Azure PowerShell (Az)](https://github.com/Azure/azure-powershell)** ☁️ | Official Microsoft cmdlets for developing, deploying, and managing Azure cloud resources. | **$0.005/hr** (Azure B1ls VM starts ~$3.80/mo; Module is 100% Free) | **Azure Free Account**: $200 credit for 30 days + 55+ always-free services (e.g. 1M Azure Functions invocations/mo) + 12 months free popular services. | **~$3.05 Trillion Market Cap** (Microsoft) |
+| **[Google Cloud Tools for PowerShell](https://github.com/GoogleCloudPlatform/google-cloud-powershell)** 🚨 | *(Deprecated Jan 2026)* PowerShell cmdlets for GCP resource management. | **$0.006/hr** (e2-micro instance starts ~$7.11/mo; Module is 100% Free) | **GCP Free Tier**: $300 credit for 90 days + 1 free e2-micro instance/mo + 5GB Cloud Storage. *(Deprecated: migrate to gcloud CLI)*. | **~$2.45 Trillion Market Cap** (Alphabet) |
+| **[Cisco UCS PowerTool](https://github.com/CiscoUcs/PowerTool)** 🔌 | Automation cmdlets for Cisco UCS servers, HyperFlex, and Cisco Intersight cloud management. | **$120/yr** (Cisco Intersight Essentials tier per server; Cmdlets are Free) | **Cisco Intersight Base**: Free forever tier for basic hardware monitoring & inventory; 90-day full feature trial. | **~$260 Billion Market Cap** (Cisco Systems) |
+| **[VMware PowerCLI](https://developer.vmware.com/powercli)** 🖥️ | The enterprise standard PowerShell module for automating VMware vSphere, NSX, and Cloud infrastructure. | **$50/core/yr** (vSphere Standard subscription starting tier; PowerCLI is Free) | **VMware Evaluation**: 60-day full feature free trial for vSphere & ESXi Hypervisor evaluation. | **~$170 Billion Market Cap** (Broadcom) |
+| **[NetApp PowerShell Toolkit](https://github.com/NetApp/netapp-powershell-toolkit)** 💾 | PowerShell cmdlets (Data ONTAP) for managing NetApp storage systems and Cloud Volumes ONTAP. | **$0.10/GB/mo** (Cloud Volumes ONTAP pay-as-you-go; Toolkit is Free) | **NetApp Cloud Volumes Trial**: 30-day free trial on AWS/Azure/GCP (up to 500GB allocation). | **~$23 Billion Market Cap** (NetApp) |
+| **[Rubrik PowerShell Module](https://github.com/rubrikinc/rubrik-sdk-for-powershell)** 🛡️ | PowerShell SDK for automating Rubrik Zero Trust Data Security, cloud backup, and recovery. | **~$2,500/yr** (Rubrik Cloud Vault subscription entry tier; Module is Free) | **Rubrik Enterprise Trial**: 30-day full-featured virtual appliance evaluation on request. | **~$11 Billion Market Cap** (Rubrik Inc.) |
+| **[Pure Storage PowerShell SDK](https://github.com/PureStorage-OpenConnect/powershell-sdk)** ⚡ | PowerShell module for configuring and managing Pure Storage FlashArray & FlashBlade arrays. | **~$1,500/mo** (Pure as-a-Service subscription entry; SDK is Free) | **Pure Test Drive**: 45-day hosted virtual lab evaluation with full API/SDK access. | **~$10 Billion Market Cap** (Pure Storage) |
+| **[Nutanix Cmdlets](https://github.com/nutanix/powershell)** 🌀 | PowerShell automation cmdlets for Nutanix AHV hypervisor, Prism Central, and Calm cloud management. | **~$150/core/yr** (Nutanix NCI starter licensing; Cmdlets are Free) | **Nutanix Community Edition**: Free forever non-production license for homelabs/testing (up to 4 nodes). | **~$9.5 Billion Market Cap** (Nutanix) |
+| **[Veeam PowerShell](https://github.com/VeeamHub/powershell)** 📦 | Automate Veeam Backup & Replication, Veeam ONE monitoring, and cloud backup workflows. | **$180/yr** (Veeam Universal License 10-pack starting rate; Module is Free) | **Veeam Community Edition**: Free forever full features for up to 10 workloads/VMs; 30-day enterprise trial. | **~$3.0 Billion Valuation** (Veeam / Insight Partners) |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+> Community-maintained open-source PowerShell projects, infrastructure modules, and cloud utilities. Sorted by GitHub stars (descending). ⭐
+
+| Repo | Description | Stars |
+|---|---|---|
+| **[Azure PowerShell (Az)](https://github.com/Azure/azure-powershell)** ☁️ | Microsoft's official Azure PowerShell module. Cross-platform cmdlets for Azure resource management and Cloud Shell integration. Apache-2.0. | [![Stars](https://img.shields.io/github/stars/Azure/azure-powershell?style=social&color=white)](https://github.com/Azure/azure-powershell/stargazers) |
+| **[DSC Community Resources](https://github.com/dsccommunity)** 🛠️ | Suite of community-maintained Desired State Configuration (DSC) resources for enterprise Windows & Cloud infrastructure (`HyperVDsc`, `SecurityPolicyDsc`, `WebAdministrationDsc`). MIT. | [![Stars](https://img.shields.io/github/stars/dsccommunity/DscResource.Tests?style=social&color=white)](https://github.com/dsccommunity/DscResource.Tests/stargazers) |
+| **[AzOps](https://github.com/Azure/AzOps)** 🚀 | Azure Landing Zones DevOps framework using PowerShell to push/pull ARM templates & Bicep resources. MIT. | [![Stars](https://img.shields.io/github/stars/Azure/AzOps?style=social&color=white)](https://github.com/Azure/AzOps/stargazers) |
+| **[Corsinvest Proxmox VE API](https://github.com/Corsinvest/cv4pve-api-powershell)** 🖥️ | Proxmox VE PowerShell module enabling PowerCLI-like API automation, VM management, and task monitoring. GPL-3.0. | [![Stars](https://img.shields.io/github/stars/Corsinvest/cv4pve-api-powershell?style=social&color=white)](https://github.com/Corsinvest/cv4pve-api-powershell/stargazers) |
+| **[AWS Tools for PowerShell](https://github.com/aws/aws-tools-for-powershell)** ⚡ | AWS official PowerShell repository containing modular cmdlets for 200+ AWS cloud services. Apache-2.0. | [![Stars](https://img.shields.io/github/stars/aws/aws-tools-for-powershell?style=social&color=white)](https://github.com/aws/aws-tools-for-powershell/stargazers) |
+| **[Azure Stack Hub Tools](https://github.com/Azure/AzureStack-Tools)** 🏢 | Official PowerShell modules for Azure Stack Hub admin, capacity management, VPN setup, and ARM validator. MIT. | [![Stars](https://img.shields.io/github/stars/Azure/AzureStack-Tools?style=social&color=white)](https://github.com/Azure/AzureStack-Tools/stargazers) |
+| **[EldoBam Proxmox PVE Module](https://github.com/EldoBam/pve-powershell-module)** 🌐 | Lightweight PowerShell module for Proxmox VE hypervisor REST API interaction and cluster administration. MIT. | [![Stars](https://img.shields.io/github/stars/EldoBam/pve-powershell-module?style=social&color=white)](https://github.com/EldoBam/pve-powershell-module/stargazers) |
+| **[AWS.Tools Parallel Installer (atp)](https://github.com/HP-85/atp)** ⏱️ | High-speed multi-platform installer script for AWS.Tools. Extracts and installs all AWS modules in ~7 seconds. MIT. | [![Stars](https://img.shields.io/github/stars/HP-85/atp?style=social&color=white)](https://github.com/HP-85/atp/stargazers) |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Help us expand this collection of cloud PowerShell automation tools: 🌟
+
+1. 🍴 **Fork** the repository.
+2. 📝 **Add/edit** entries in `README.md` following the exact table structure.
+3. 🔍 Ensure pricing details, free tier quotas, and star badges are accurate.
+4. 📥 Submit a **Pull Request** with a clear title and context.
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this repository helpful for your cloud operations and PowerShell workflows, please consider supporting the project! ☕
+
+- ⭐ **Star this repo** on GitHub to increase visibility.
+- 🔀 **Fork & Share** it with your fellow DevOps and PowerShell automation engineers.
+- 💖 **Sponsor the Maintainer**: [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Cloud-Powershell-Automation&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Cloud-Powershell-Automation&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This is a **community-curated list** provided for educational and informational purposes only.
+- Cloud PowerShell modules interact directly with enterprise cloud infrastructure. Always follow security best practices, least-privilege RBAC policies, and credential vaulting (e.g. `SecretManagement` module).
+- **Google Cloud Notice**: *Google Cloud Tools for PowerShell reached End-of-Life (EOL) in January 2026*. Migrate new automation to Google Cloud CLI (`gcloud`) or REST APIs.
+- **Pricing & Quotas**: All listed prices, valuations, and free tier limits are derived from published enterprise rate cards as of late 2026 and are subject to provider modifications.
+
+---
+
+<p align="center">
+  <b>Curated with ❤️ for Cloud Administrators, DevOps Engineers, and PowerShell Automation Enthusiasts worldwide.</b>
+</p>
